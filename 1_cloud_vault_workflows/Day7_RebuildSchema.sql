@@ -1,4 +1,4 @@
--- 1. Create the Members table with multi-field clustering
+-- 1.Members table with multi-field clustering
 CREATE TABLE `my-project-12345-503409.auraclub_analytics.members_staging` (
   signup_timestamp STRING,
   full_name STRING,
@@ -8,7 +8,7 @@ CREATE TABLE `my-project-12345-503409.auraclub_analytics.members_staging` (
 )
 CLUSTER BY status, membership_type;
 
--- 2. Create the Revenue table with DAY Partitioning, Clustering, and Native ARRAY Support
+-- 2.Revenue table with DAY Partitioning, Clustering, and Native ARRAY Support
 CREATE TABLE `my-project-12345-503409.auraclub_analytics.revenue_staging` (
   email STRING,
   source_platform STRING,
